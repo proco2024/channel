@@ -1,0 +1,263 @@
+{
+    "remarks": "🇬🇧@FREE2CONFIG🇬🇧",
+    "log": {
+        "loglevel": "warning"
+    },
+    "inbounds": [
+        {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ],
+                "routeOnly": false
+            },
+            "settings": {
+                "auth": "noauth",
+                "udp": true
+            }
+        },
+        {
+            "tag": "http",
+            "port": 10809,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ],
+                "routeOnly": false
+            },
+            "settings": {
+                "auth": "noauth",
+                "udp": true,
+                "allowTransparent": false
+            }
+        },
+        {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ],
+                "routeOnly": false
+            },
+            "settings": {
+                "auth": "noauth",
+                "udp": true
+            }
+        },
+        {
+            "tag": "http",
+            "port": 10809,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ],
+                "routeOnly": false
+            },
+            "settings": {
+                "auth": "noauth",
+                "udp": true,
+                "allowTransparent": false
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "104.16.244.210",
+                        "port": 443,
+                        "users": [
+                            {
+                                "id": "9f7c10ab-7a51-4468-b3b3-0670ec3a019e",
+                                "alterId": 0,
+                                "email": "user",
+                                "security": "auto",
+                                "encryption": "none",
+                                "flow": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "serverName": "76213678524111476542014925833368.v2line.net",
+                    "alpn": [
+                        "http/1.1"
+                    ],
+                    "fingerprint": "randomized",
+                    "allowInsecure": false,
+                    "show": false
+                },
+                "wsSettings": {
+                    "path": "/v2line-singapore-vl-ws-tls-advanced#@FREE2CONFIG",
+                    "headers": {
+                        "Host": "76213678524111476542014925833368.v2line.net",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0",
+                        "Content-Type": "application/json",
+                        "Accept": "application/json",
+                        "Referer": "https://v2line.t.me"
+                    }
+                },
+                "sockopt": {
+                    "dialerProxy": "fragment",
+                    "tcpFastOpen": true,
+                    "tcpKeepAliveInterval": 10,
+                    "tcpKeepAliveIdle": 30,
+                    "tcpMptcp": false,
+                    "tcpNoDelay": true
+                }
+            },
+            "mux": {
+                "enabled": true,
+                "concurrency": 16,
+                "xudpConcurrency": 16,
+                "xudpProxyUDP443": "reject"
+            }
+        },
+        {
+            "tag": "fragment",
+            "protocol": "freedom",
+            "settings": {
+                "domainStrategy": "AsIs",
+                "fragment": {
+                    "packets": "1",
+                    "length": "1-3",
+                    "interval": "1"
+                }
+            },
+            "streamSettings": {
+                "sockopt": {
+                    "tcpFastOpen": true,
+                    "tcpKeepAliveInterval": 10,
+                    "tcpKeepAliveIdle": 30,
+                    "tcpMptcp": false,
+                    "tcpNoDelay": true
+                }
+            }
+        },
+        {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "104.18.33.24",
+                        "port": 443,
+                        "users": [
+                            {
+                                "id": "9d05763c-bdac-47c9-a23c-430562df02a2",
+                                "alterId": 0,
+                                "email": "user",
+                                "security": "auto",
+                                "encryption": "none",
+                                "flow": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "serverName": "33779943759329471762225450635367.v2line.net",
+                    "alpn": [
+                        "http/1.1"
+                    ],
+                    "fingerprint": "randomized",
+                    "allowInsecure": false,
+                    "show": false
+                },
+                "wsSettings": {
+                    "path": "/v2line-london-unitedkingdom-vl-ws-tls-advanced#FREE2CONFIG",
+                    "headers": {
+                        "Host": "33779943759329471762225450635367.v2line.net",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0",
+                        "Content-Type": "application/json",
+                        "Accept": "application/json",
+                        "Referer": "https://v2line.t.me"
+                    }
+                },
+                "sockopt": {
+                    "dialerProxy": "fragment",
+                    "tcpFastOpen": true,
+                    "tcpKeepAliveInterval": 10,
+                    "tcpKeepAliveIdle": 30,
+                    "tcpMptcp": false,
+                    "tcpNoDelay": true
+                }
+            },
+            "mux": {
+                "enabled": true,
+                "concurrency": 16,
+                "xudpConcurrency": 16,
+                "xudpProxyUDP443": "reject"
+            }
+        },
+        {
+            "tag": "fragment",
+            "protocol": "freedom",
+            "settings": {
+                "domainStrategy": "AsIs",
+                "fragment": {
+                    "packets": "1",
+                    "length": "1-3",
+                    "interval": "1"
+                }
+            },
+            "streamSettings": {
+                "sockopt": {
+                    "tcpFastOpen": true,
+                    "tcpKeepAliveInterval": 10,
+                    "tcpKeepAliveIdle": 30,
+                    "tcpMptcp": false,
+                    "tcpNoDelay": true
+                }
+            }
+        }
+    ],
+    "routing": {
+        "domainStrategy": "AsIs",
+        "rules": [
+            {
+                "id": "1",
+                "type": "field",
+                "port": "0-65535",
+                "outboundTag": "proxy",
+                "enabled": true
+            },
+            {
+                "id": "1",
+                "type": "field",
+                "port": "0-65535",
+                "outboundTag": "proxy",
+                "enabled": true
+            }
+        ]
+    }
+}
