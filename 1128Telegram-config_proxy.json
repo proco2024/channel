@@ -1,0 +1,460 @@
+{
+    "log": {
+        "level": "warn",
+        "timestamp": true
+    },
+    "dns": {
+        "servers": [
+            {
+                "address": "udp://1.1.1.1",
+                "address_resolver": "dns-direct",
+                "detour": "✅ Selector",
+                "tag": "dns-remote"
+            },
+            {
+                "address": "8.8.8.8",
+                "detour": "direct",
+                "tag": "dns-direct"
+            },
+            {
+                "address": "rcode://success",
+                "tag": "dns-block"
+            }
+        ],
+        "rules": [
+            {
+                "domain": [
+                    "nkAnG2rEpLACE.airlineSHoma.Com",
+                    "www.speedtest.net",
+                    "indeed.com"
+                ],
+                "server": "dns-direct"
+            },
+            {
+                "domain": [
+                    "raw.githubusercontent.com",
+                    "time.apple.com"
+                ],
+                "server": "dns-direct"
+            },
+            {
+                "clash_mode": "Direct",
+                "server": "dns-direct"
+            },
+            {
+                "clash_mode": "Global",
+                "server": "dns-remote"
+            },
+            {
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "rule_set": "geosite-ir"
+                    },
+                    {
+                        "rule_set": "geoip-ir"
+                    }
+                ],
+                "server": "dns-direct"
+            },
+            {
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "rule_set": "geosite-cn"
+                    },
+                    {
+                        "rule_set": "geoip-cn"
+                    }
+                ],
+                "server": "dns-direct"
+            },
+            {
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "rule_set": "geosite-category-ru"
+                    },
+                    {
+                        "rule_set": "geoip-ru"
+                    }
+                ],
+                "server": "dns-direct"
+            },
+            {
+                "disable_cache": true,
+                "rule_set": [
+                    "geosite-malware",
+                    "geosite-phishing",
+                    "geosite-cryptominers",
+                    "geosite-category-ads-all"
+                ],
+                "server": "dns-block"
+            }
+        ],
+        "independent_cache": true,
+        "strategy": "ipv4_only"
+    },
+    "inbounds": [
+        {
+            "type": "tun",
+            "tag": "tun-in",
+            "address": [
+                "172.18.0.1/28",
+                "fdfe:dcba:9876::1/126"
+            ],
+            "mtu": 9000,
+            "auto_route": true,
+            "strict_route": true,
+            "stack": "mixed",
+            "endpoint_independent_nat": true,
+            "sniff": true,
+            "sniff_override_destination": true
+        },
+        {
+            "type": "mixed",
+            "tag": "mixed-in",
+            "listen": "127.0.0.1",
+            "listen_port": 2080,
+            "sniff": true,
+            "sniff_override_destination": false
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "selector",
+            "tag": "✅ Selector",
+            "outbounds": [
+                "Best Ping 💥",
+                "1Telegram:@config_proxy",
+                "2Telegram:@config_proxy",
+                "3Telegram:@config_proxy",
+                "4Telegram:@config_proxy"
+            ]
+        },
+        {
+            "type": "urltest",
+            "tag": "Best Ping 💥",
+            "outbounds": [
+                "1Telegram:@config_proxy",
+                "2Telegram:@config_proxy",
+                "3Telegram:@config_proxy",
+                "4Telegram:@config_proxy"
+            ],
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": "30s"
+        },
+        {
+            "type": "direct",
+            "domain_strategy": "ipv4_only",
+            "tag": "direct"
+        },
+        {
+            "type": "block",
+            "tag": "block"
+        },
+        {
+            "type": "dns",
+            "tag": "dns-out"
+        },
+        {
+            "type": "vless",
+            "server": "openai.com",
+            "server_port": 443,
+            "domain_strategy": "ipv4_only",
+            "uuid": "24d9a79e-de35-45dc-ad02-ffbb5ed403a7",
+            "tls": {
+                "alpn": "h2,http/1.1",
+                "enabled": true,
+                "insecure": false,
+                "server_name": "nkAnG2rEpLACE.airlineSHoma.Com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2560,
+                "headers": {
+                    "Host": "nkAnG2rEpLACE.airlineSHoma.Com"
+                },
+                "path": "/",
+                "type": "ws"
+            },
+            "tag": "1Telegram:@config_proxy",
+            "tls_fragment": {
+                "enabled": true,
+                "size": "100-200",
+                "sleep": "1-1"
+            }
+        },
+        {
+            "type": "vless",
+            "server": "www.speedtest.net",
+            "server_port": 443,
+            "domain_strategy": "ipv4_only",
+            "uuid": "24d9a79e-de35-45dc-ad02-ffbb5ed403a7",
+            "tls": {
+                "alpn": "h2,http/1.1",
+                "enabled": true,
+                "insecure": false,
+                "server_name": "nkAnG2rEpLACE.airlineSHoma.Com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2560,
+                "headers": {
+                    "Host": "nkAnG2rEpLACE.airlineSHoma.Com"
+                },
+                "path": "/",
+                "type": "ws"
+            },
+            "tag": "2Telegram:@config_proxy",
+            "tls_fragment": {
+                "enabled": true,
+                "size": "100-200",
+                "sleep": "1-1"
+            }
+        },
+        {
+            "type": "vless",
+            "server": "footofan.com",
+            "server_port": 443,
+            "domain_strategy": "ipv4_only",
+            "uuid": "24d9a79e-de35-45dc-ad02-ffbb5ed403a7",
+            "tls": {
+                "alpn": "h2,http/1.1",
+                "enabled": true,
+                "insecure": false,
+                "server_name": "nkAnG2rEpLACE.airlineSHoma.Com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2560,
+                "headers": {
+                    "Host": "nkAnG2rEpLACE.airlineSHoma.Com"
+                },
+                "path": "/",
+                "type": "ws"
+            },
+            "tag": "3Telegram:@config_proxy",
+            "tls_fragment": {
+                "enabled": true,
+                "size": "100-200",
+                "sleep": "1-1"
+            }
+        },
+          {
+            "type": "vless",
+            "server": "thailandnet65.ir",
+            "server_port": 443,
+            "domain_strategy": "ipv4_only",
+            "uuid": "24d9a79e-de35-45dc-ad02-ffbb5ed403a7",
+            "tls": {
+                "alpn": "h2,http/1.1",
+                "enabled": true,
+                "insecure": false,
+                "server_name": "nkAnG2rEpLACE.airlineSHoma.Com",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2560,
+                "headers": {
+                    "Host": "nkAnG2rEpLACE.airlineSHoma.Com"
+                },
+                "path": "/",
+                "type": "ws"
+            },
+            "tag": "4Telegram:@config_proxy",
+            "tls_fragment": {
+                "enabled": true,
+                "size": "100-200",
+                "sleep": "1-1"
+            }
+        }
+    
+    ],
+    "route": {
+        "rules": [
+            {
+                "protocol": "dns",
+                "outbound": "dns-out"
+            },
+            {
+                "clash_mode": "Direct",
+                "outbound": "direct"
+            },
+            {
+                "clash_mode": "Global",
+                "outbound": "✅ Selector"
+            },
+            {
+                "rule_set": [
+                    "geosite-ir",
+                    "geosite-cn",
+                    "geosite-category-ru"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "ip_is_private": true,
+                "outbound": "direct"
+            },
+            {
+                "rule_set": [
+                    "geoip-ir",
+                    "geoip-cn",
+                    "geoip-ru"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "rule_set": [
+                    "geosite-malware",
+                    "geosite-phishing",
+                    "geosite-cryptominers",
+                    "geosite-category-ads-all"
+                ],
+                "outbound": "block"
+            },
+            {
+                "rule_set": [
+                    "geoip-malware",
+                    "geoip-phishing"
+                ],
+                "outbound": "block"
+            },
+            {
+                "network": "udp",
+                "port": 443,
+                "protocol": "quic",
+                "outbound": "block"
+            }
+        ],
+        "rule_set": [
+            {
+                "type": "remote",
+                "tag": "geosite-ir",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geoip-ir",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-cn",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geoip-cn",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-category-ru",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ru.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geoip-ru",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-ru.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-malware",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-malware.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geoip-malware",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-malware.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-phishing",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-phishing.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geoip-phishing",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-phishing.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-cryptominers",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-cryptominers.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-category-ads-all",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs",
+                "download_detour": "direct"
+            }
+        ],
+        "auto_detect_interface": true,
+        "override_android_vpn": true,
+        "final": "✅ Selector"
+    },
+    "ntp": {
+        "enabled": true,
+        "server": "time.apple.com",
+        "server_port": 123,
+        "detour": "direct",
+        "interval": "30m"
+    },
+    "experimental": {
+        "cache_file": {
+            "enabled": true,
+            "store_fakeip": true
+        },
+        "clash_api": {
+            "external_controller": "127.0.0.1:9090",
+            "external_ui": "ui",
+            "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+            "external_ui_download_detour": "direct",
+            "default_mode": "Rule"
+        }
+    }
+}
