@@ -1,0 +1,520 @@
+mixed-port: 7890
+ipv6: true
+allow-lan: true
+mode: rule
+log-level: warning
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+unified-delay: false
+geo-auto-update: true
+geo-update-interval: 168
+external-controller: '127.0.0.1:9090'
+external-ui-url: 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
+external-ui: ui
+external-controller-cors:
+  allow-origins: ['*']
+  allow-private-network: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+hosts: {}
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  respect-rules: true
+  use-hosts: true
+  use-system-hosts: false
+  nameserver: 
+    - '1.1.1.1'
+    - '1.0.0.1'
+  proxy-server-nameserver: 
+    - '8.8.8.8'
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  strict-route: true
+  auto-detect-interface: true
+  dns-hijack: 
+    - 'any:53'
+  mtu: 1316
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+
+proxies:
+  - name: "🇮🇷 Warp - IPv4"
+    type: wireguard
+    ip: 172.16.0.3
+    ipv6: 2001:db8:1::1
+    private-key: "pQ15jrTUSHWaZUZrR7VKob9PjbrStxUQJ/akkKkplsU="
+    server: 188.114.97.136
+    port: 1010
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: [209,98,59]
+    udp: true
+    mtu: 1316
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 100
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇩🇪 Warp - IPv4"
+    type: wireguard
+    ip: 172.16.0.3
+    ipv6: 2001:db8:1::1
+    private-key: "U6ON8cy8qUknlIT2DGUXUlS0BnO9FhEl+UY7AfMlJ5I="
+    server: 188.114.98.105
+    port: 1010
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1316
+    dialer-proxy: "🇮🇷 Warp - IPv4"
+
+  - name: "🇳🇱 Amsterdam - IPv4"
+    type: ss
+    server: 198.105.123.190
+    port: 46902
+    cipher: chacha20-ietf-poly1305
+    password: "2UrSffeNABXGXXfNhoL6xBUnh1RzqMizrQ2s9QfC38P2YPuYPRTqW5zZg6jGisiNhkzM4SRjF6nzvFb18GPtESWoXWjhqyC8"
+    dialer-proxy: "🇮🇷 Warp - IPv4"
+
+  - name: "🇮🇷 Warp - IPv6"
+    type: wireguard
+    ip: 172.16.0.2
+    ipv6: 2001:db8:1::3
+    private-key: "GsKlQMftAHdzZjMC17pjwKl+Fs2EVoB8VvHb8JJVFr8="
+    server: "[2606:4700:d0::5db:987a:2353:9dcc]"
+    port: 3854
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1316
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 100
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇸🇪 Warp - IPv6"
+    type: wireguard
+    ip: 172.16.0.2
+    private-key: "0GapdERcPdqP7hXovlbv/HoUafjR3jB4EGGm+LXXdlA="
+    server: 162.159.192.2
+    port: 1010
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1316
+    dialer-proxy: "🇮🇷 Warp - IPv6"
+
+  - name: "🇮🇷 Telegram:@config_proxy-1"
+    type: wireguard
+    ip: 172.16.0.2/32
+    private-key: "uGcdKX8LYYIk/Xj+0QB/fvRPEoHx1WziauH6khat3U8="
+    server: 188.114.97.160
+    port: 945
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: [105,13,151]
+    udp: true
+    mtu: 1316
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 100
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇮🇷 Telegram:@config_proxy-2"
+    type: wireguard
+    ip: 172.16.0.2/32
+    private-key: "uGcdKX8LYYIk/Xj+0QB/fvRPEoHx1WziauH6khat3U8="
+    server: 188.114.98.185
+    port: 945
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: [105,13,151]
+    udp: true
+    mtu: 1316
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 100
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇬🇧-Telegram:@config_proxy"
+    type: wireguard
+    ip: 10.1.33.145/32
+    private-key: "mJK35TL0Nf4ESOiMGSUwvzC9nj7RMaYAQAG9vU4EA04="
+    server: 109.169.22.75
+    port: 60100
+    public-key: "PCHW67+lEKBQI+qRFaRptHN+RrUBIXYZ/v2Xhi+CoRk="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1316
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 100
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇩🇪-Telegram:@config_proxy"
+    type: wireguard
+    ip: 10.1.33.145/32
+    private-key: "mJK35TL0Nf4ESOiMGSUwvzC9nj7RMaYAQAG9vU4EA04="
+    server: 162.55.219.168
+    port: 60100
+    public-key: "PCHW67+lEKBQI+qRFaRptHN+RrUBIXYZ/v2Xhi+CoRk="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1316
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 100
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇳🇱-Telegram:@config_proxy"
+    type: wireguard
+    ip: 10.1.33.145/32
+    private-key: "mJK35TL0Nf4ESOiMGSUwvzC9nj7RMaYAQAG9vU4EA04="
+    server: 50.7.176.133
+    port: 60100
+    public-key: "PCHW67+lEKBQI+qRFaRptHN+RrUBIXYZ/v2Xhi+CoRk="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1316
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 100
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇺🇦-Telegram:@config_proxy"
+    type: wireguard
+    ip: 10.1.33.145/32
+    private-key: "mJK35TL0Nf4ESOiMGSUwvzC9nj7RMaYAQAG9vU4EA04="
+    server: 31.42.186.176
+    port: 60100
+    public-key: "PCHW67+lEKBQI+qRFaRptHN+RrUBIXYZ/v2Xhi+CoRk="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1316
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 100
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇷🇺-Telegram:@config_proxy"
+    type: wireguard
+    ip: 10.1.33.145/32
+    private-key: "mJK35TL0Nf4ESOiMGSUwvzC9nj7RMaYAQAG9vU4EA04="
+    server: 94.131.113.88
+    port: 60100
+    public-key: "PCHW67+lEKBQI+qRFaRptHN+RrUBIXYZ/v2Xhi+CoRk="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1316
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 100
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇬🇧-Telegram:@config_proxy-1"
+    type: wireguard
+    ip: 10.1.33.145/32
+    private-key: "mJK35TL0Nf4ESOiMGSUwvzC9nj7RMaYAQAG9vU4EA04="
+    server: 88.150.154.27
+    port: 60100
+    public-key: "PCHW67+lEKBQI+qRFaRptHN+RrUBIXYZ/v2Xhi+CoRk="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1316
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 100
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇲🇩-Telegram:@config_proxy"
+    type: wireguard
+    ip: 10.1.33.145/32
+    private-key: "mJK35TL0Nf4ESOiMGSUwvzC9nj7RMaYAQAG9vU4EA04="
+    server: 193.233.203.43
+    port: 60100
+    public-key: "PCHW67+lEKBQI+qRFaRptHN+RrUBIXYZ/v2Xhi+CoRk="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1316
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 100
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇺🇸-Telegram:@config_proxy"
+    type: wireguard
+    ip: 10.1.33.145/32
+    private-key: "mJK35TL0Nf4ESOiMGSUwvzC9nj7RMaYAQAG9vU4EA04="
+    server: 192.223.24.121
+    port: 60100
+    public-key: "PCHW67+lEKBQI+qRFaRptHN+RrUBIXYZ/v2Xhi+CoRk="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1316
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 100
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇮🇷 Telegram:@config_proxy-3"
+    type: wireguard
+    ip: 172.16.0.2/32
+    private-key: "WFM0Tg93Tmm9BAgOoKJre3kpagIJGqs8X0o0G8UyakA="
+    server: 188.114.96.102
+    port: 903
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: [123, 55, 31]
+    udp: true
+    mtu: 1280
+    keepalive: 5
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 100
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+
+  - name: "🇮🇷 Telegram:@config_proxy-4"
+    type: wireguard
+    ip: 172.16.0.2/32
+    private-key: "oJyILsu+ynZaiauCWCi/CEQF6Ndu8L92XDGq9v4fo3g="
+    server: 188.114.96.84
+    port: 880
+    public-key: "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: [155, 155, 218]
+    udp: true
+    mtu: 1280
+    keepalive: 5
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 4
+      jmin: 40
+      jmax: 100
+      s1: 0
+      s2: 0
+      h1: 1
+      h2: 2
+      h4: 3
+      h3: 4
+      
+proxy-groups:
+  - name: "✅ Selector"
+    type: select
+    proxies:
+      - "🚀 Auto-Select (Best)"
+      - "🇮🇷 Warp - IPv4"
+      - "🇩🇪 Warp - IPv4"
+      - "🇳🇱 Amsterdam - IPv4"
+      - "🇮🇷 Warp - IPv6"
+      - "🇸🇪 Warp - IPv6"
+      - "🇮🇷 Telegram:@config_proxy-1"
+      - "🇮🇷 Telegram:@config_proxy-2"
+      - "🇬🇧-Telegram:@config_proxy"
+      - "🇩🇪-Telegram:@config_proxy"
+      - "🇳🇱-Telegram:@config_proxy"
+      - "🇺🇦-Telegram:@config_proxy"
+      - "🇷🇺-Telegram:@config_proxy"
+      - "🇬🇧-Telegram:@config_proxy-1"
+      - "🇲🇩-Telegram:@config_proxy"
+      - "🇺🇸-Telegram:@config_proxy"
+      - "🇮🇷 Telegram:@config_proxy-3"
+      - "🇮🇷 Telegram:@config_proxy-4"
+
+  - name: "🚀 Auto-Select (Best)"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 90
+    tolerance: 50
+    proxies:
+      - "🇮🇷 Warp - IPv4"
+      - "🇩🇪 Warp - IPv4"
+      - "🇳🇱 Amsterdam - IPv4"
+      - "🇮🇷 Warp - IPv6"
+      - "🇸🇪 Warp - IPv6"
+      - "🇮🇷 Telegram:@config_proxy-1"
+      - "🇮🇷 Telegram:@config_proxy-2"
+      - "🇬🇧-Telegram:@config_proxy"
+      - "🇩🇪-Telegram:@config_proxy"
+      - "🇳🇱-Telegram:@config_proxy"
+      - "🇺🇦-Telegram:@config_proxy"
+      - "🇷🇺-Telegram:@config_proxy"
+      - "🇬🇧-Telegram:@config_proxy-1"
+      - "🇲🇩-Telegram:@config_proxy"
+      - "🇺🇸-Telegram:@config_proxy"
+      - "🇮🇷 Telegram:@config_proxy-3"
+      - "🇮🇷 Telegram:@config_proxy-4"
+
+rule-providers:
+  ir:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ir.txt"
+    path: "./ruleset/ir.txt"
+    interval: 86400
+  ir-cidr:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ircidr.txt"
+    path: "./ruleset/ir-cidr.txt"
+    interval: 86400
+  malware:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.txt"
+    path: "./ruleset/malware.txt"
+    interval: 86400
+  phishing:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.txt"
+    path: "./ruleset/phishing.txt"
+    interval: 86400
+  cryptominers:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.txt"
+    path: "./ruleset/cryptominers.txt"
+    interval: 86400
+  ads:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ads.txt"
+    path: "./ruleset/ads.txt"
+    interval: 86400
+
+rules:
+  - RULE-SET,ir,DIRECT
+  - RULE-SET,ir-cidr,DIRECT
+  - RULE-SET,malware,REJECT
+  - RULE-SET,phishing,REJECT
+  - RULE-SET,cryptominers,REJECT
+  - RULE-SET,ads,REJECT
+  - MATCH,🚀 Auto-Select (Best)
+
+ntp:
+  enable: true
+  server: "time.apple.com"
+  port: 123
+  interval: 30
