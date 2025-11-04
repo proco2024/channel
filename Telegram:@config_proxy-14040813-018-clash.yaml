@@ -1,0 +1,1685 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+ipv6: false
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+  - 223.5.5.5
+  - 114.114.114.114
+  nameserver:
+  - 223.5.5.5
+  - 114.114.114.114
+  - 119.29.29.29
+  - 180.76.76.76
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - '*.lan'
+  - '*.localdomain'
+  - '*.example'
+  - '*.invalid'
+  - '*.localhost'
+  - '*.test'
+  - '*.local'
+  - '*.home.arpa'
+  - router.asus.com
+  - localhost.sec.qq.com
+  - localhost.ptlogin2.qq.com
+  - +.msftconnecttest.com
+tun:
+  enable: true
+  stack: system
+proxies:
+- name: af390b-Telegram:@config_proxy 💦
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 185.231.205.167
+  port: 8880
+  network: grpc
+  tls: false
+- name: 0aa32f-Telegram:@config_proxy 💦
+  uuid: 4f8b80d1-667e-4ab5-9285-0fbd0e3dcab2
+  type: vless
+  encryption: none
+  server: uk29.clearorbitllc.com
+  port: 443
+  network: tcp
+  tls: false
+  client-fingerprint: chrome
+- name: 2596ea-Telegram:@config_proxy 💦
+  uuid: 401374e6-df77-41fb-f638-dad8184f175b
+  type: vless
+  encryption: none
+  server: 45.82.251.145
+  port: 80
+  network: grpc
+  tls: false
+- name: 0fefe4-Telegram:@config_proxy 💦
+  uuid: 83e57c25-1c8e-429f-974f-e3bde3fff12d
+  type: vless
+  encryption: none
+  server: pl.nnvpn.io
+  port: 443
+  network: tcp
+  tls: false
+- name: d1135e-Telegram:@config_proxy 💦
+  uuid: ca2e23cb-2d9a-4812-d713-506f91d3735f
+  type: vless
+  encryption: none
+  server: 81.91.179.17
+  port: 8880
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+- name: c78bfd-Telegram:@config_proxy 🔥
+  uuid: cb84528f-f033-40bc-9723-2f0ae3e98c0b
+  type: vless
+  encryption: none
+  server: am8.amin-1.ir
+  port: 2082
+  network: tcp
+  tls: false
+- name: bc5711-Telegram:@config_proxy 🔥
+  uuid: TelegramChannel%3Adaredevill_404
+  type: vless
+  encryption: none
+  server: 91.98.229.73
+  port: 20569
+  network: xhttp
+  tls: false
+- name: a9325b-Telegram:@config_proxy 🔥
+  uuid: e78dfc35-1a6f-f858-ab12-66a72eb239b1
+  type: vless
+  encryption: none
+  server: switzerland.marzxo.biz
+  port: 8089
+  network: tcp
+  tls: false
+  client-fingerprint: firefox
+- name: f648ef-Telegram:@config_proxy 🔥
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 185.231.205.155
+  port: 8880
+  network: grpc
+  tls: false
+- name: b8c704-Telegram:@config_proxy 🔥
+  uuid: 0d0782a3-2c62-4936-b893-5790188778ea
+  type: vless
+  encryption: none
+  server: 170.114.46.175
+  port: 443
+  network: ws
+  tls: true
+  servername: smrtwtsm.confappha.com
+  ws-opts:
+    path: /?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512
+    headers:
+      Host: smrtwtsm.confappha.com
+- name: c0c926-Telegram:@config_proxy 💦
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 185.231.205.167
+  port: 8880
+  network: grpc
+  tls: false
+- name: 17c96c-Telegram:@config_proxy 💦
+  uuid: 4f8b80d1-667e-4ab5-9285-0fbd0e3dcab2
+  type: vless
+  encryption: none
+  server: uk29.clearorbitllc.com
+  port: 443
+  network: tcp
+  tls: false
+  client-fingerprint: chrome
+- name: 178d3b-Telegram:@config_proxy 💦
+  uuid: 401374e6-df77-41fb-f638-dad8184f175b
+  type: vless
+  encryption: none
+  server: 45.82.251.145
+  port: 80
+  network: grpc
+  tls: false
+- name: 5d0e0e-Telegram:@config_proxy 💦
+  uuid: 83e57c25-1c8e-429f-974f-e3bde3fff12d
+  type: vless
+  encryption: none
+  server: pl.nnvpn.io
+  port: 443
+  network: tcp
+  tls: false
+- name: 60e9eb-Telegram:@config_proxy 💦
+  uuid: ca2e23cb-2d9a-4812-d713-506f91d3735f
+  type: vless
+  encryption: none
+  server: 81.91.179.17
+  port: 8880
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+- name: 04a77a-Telegram:@config_proxy 🔥
+  uuid: 026ce330-bb63-42fa-fac9-254275728d40
+  type: vless
+  encryption: none
+  server: chat.openai.com
+  port: 8080
+  network: ws
+  tls: false
+  ws-opts:
+    path: /olem/ws?ed=1024
+    headers:
+      Host: shad.ir.fin.test.digicyber.click.
+- name: b30335-Telegram:@config_proxy 🔥
+  uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e
+  type: vless
+  encryption: none
+  server: 35.181.85.159
+  port: 22224
+  network: ws
+  tls: true
+  servername: trojan.burgerip.co.uk
+  ws-opts:
+    path: /telegram-channel-vlessconfig
+- name: cd505d-Telegram:@config_proxy 🔥
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 638936664855921747.amsterdam-prx-dnraacl.info
+  port: 8880
+  network: grpc
+  tls: false
+- name: 7d3b8b-Telegram:@config_proxy 🔥
+  uuid: dc4f7caf-b7d8-4803-84a9-4b0fecbc2874
+  type: vless
+  encryption: none
+  server: 85.90.207.183
+  port: 54400
+  network: ws
+  tls: false
+- name: d6025c-Telegram:@config_proxy 🔥
+  uuid: ac93caa8-fc75-4bc8-bbb9-f09d964b5d69
+  type: vless
+  encryption: none
+  server: updatem.faraservice.space
+  port: 3209
+  network: grpc
+  tls: false
+  client-fingerprint: chrome
+- name: fdfff8-Telegram:@config_proxy 🔥
+  uuid: 99f47914-23d8-4367-81bc-b4b759eb7505
+  type: vless
+  encryption: none
+  server: www.visa.com.tw
+  port: 443
+  network: ws
+  tls: true
+  servername: rAyAn-cOnFiG-jp-1.pArIsA.DpDnS.OrG
+  skip-cert-verify: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /ws
+    headers:
+      Host: rAyAn-cOnFiG-jp-1.pArIsA.DpDnS.OrG
+- name: 2d9b56-Telegram:@config_proxy 🔥
+  uuid: be288b40-1403-4343-a048-1815f8c8ff8c
+  type: vless
+  encryption: none
+  server: 151.101.3.8
+  port: 80
+  network: xhttp
+  tls: false
+- name: adc2ec-Telegram:@config_proxy 🔥
+  uuid: 2836c061-ea09-45e5-a98e-4ca478e744b0
+  type: vless
+  encryption: none
+  server: 172.66.47.63
+  port: 443
+  network: ws
+  tls: true
+  servername: aDD-1cV.pAGeS.Dev
+  client-fingerprint: random
+  ws-opts:
+    path: /f2GYY0YixkpPeMtx/Y2RuLWIxMDAueG4tLWI2Z2FjLmV1Lm9yZw
+    headers:
+      Host: aDD-1cV.pAGeS.Dev
+- name: 64db55-Telegram:@config_proxy 🔥
+  uuid: 3384212c-5942-4669-ac99-6155b87decd6
+  type: vless
+  encryption: none
+  server: 172.66.40.99
+  port: 2095
+  network: ws
+  tls: false
+  ws-opts:
+    path: /@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam?ed=2048
+    headers:
+      Host: test3.amin8263.ir
+- name: 1265ea-Telegram:@config_proxy 🔥
+  uuid: 3d7dd548-5456-4f28-8019-393fbfab3312
+  type: vless
+  encryption: none
+  server: 172.67.74.133
+  port: 443
+  network: ws
+  tls: true
+  servername: app-stg.gopay.co.id.servpn.my.id
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sg3/?ed=2048JOIN---PLANB_PROXY
+    headers:
+      Host: app-stg.gopay.co.id.servpn.my.id
+- name: 685094-Telegram:@config_proxy 🔥
+  uuid: 401374e6-df77-41fb-f638-dad8184f175b
+  type: vless
+  encryption: none
+  server: all.tellmethetrue.shop
+  port: 443
+  network: grpc
+  tls: true
+  servername: pqh29v7.hiddendom.shop
+  alpn:
+  - h2
+- name: dff0a0-Telegram:@config_proxy 🔥
+  uuid: f4b69ef0-d4b9-4ad5-954e-0c98fc169fce
+  type: vless
+  encryption: none
+  server: 91.98.233.176
+  port: 24199
+  network: tcp
+  tls: false
+- name: a73959-Telegram:@config_proxy 🔥
+  uuid: 07af5265-c931-4b5a-a3e1-25de5c5b1fbf
+  type: vless
+  encryption: none
+  server: t.irimcs.org
+  port: 2053
+  network: grpc
+  tls: false
+  client-fingerprint: chrome
+- name: 0a5078-Telegram:@config_proxy 🔥
+  uuid: 2039e9dc-b295-4c4d-8d51-49896598d9d0
+  type: vless
+  encryption: none
+  server: 151.101.3.8
+  port: 80
+  network: tcp
+  tls: false
+- name: e3a636-Telegram:@config_proxy 💦
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 185.231.205.167
+  port: 8880
+  network: grpc
+  tls: false
+- name: e20181-Telegram:@config_proxy 💦
+  uuid: 4f8b80d1-667e-4ab5-9285-0fbd0e3dcab2
+  type: vless
+  encryption: none
+  server: uk29.clearorbitllc.com
+  port: 443
+  network: tcp
+  tls: false
+  client-fingerprint: chrome
+- name: 155b77-Telegram:@config_proxy 💦
+  uuid: 401374e6-df77-41fb-f638-dad8184f175b
+  type: vless
+  encryption: none
+  server: 45.82.251.145
+  port: 80
+  network: grpc
+  tls: false
+- name: fc1e73-Telegram:@config_proxy 💦
+  uuid: 83e57c25-1c8e-429f-974f-e3bde3fff12d
+  type: vless
+  encryption: none
+  server: pl.nnvpn.io
+  port: 443
+  network: tcp
+  tls: false
+- name: 9b4031-Telegram:@config_proxy 💦
+  uuid: ca2e23cb-2d9a-4812-d713-506f91d3735f
+  type: vless
+  encryption: none
+  server: 81.91.179.17
+  port: 8880
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+- name: d94837-Telegram:@config_proxy 🔥
+  uuid: 8d5911d9-f9f9-484f-8f67-5729ab5fd1af
+  type: vless
+  encryption: none
+  server: 103.116.7.103
+  port: 2083
+  network: ws
+  tls: true
+  servername: saas.cfliu.filegear-sg.me
+  ws-opts:
+    path: /snippets?ip=tw.tp81.netlib.re:81#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512
+    headers:
+      Host: saas.cfliu.filegear-sg.me
+- name: 510292-Telegram:@config_proxy 🔥
+  uuid: a13df940-020c-465f-bc89-ee5279b5cd6a
+  type: vless
+  encryption: none
+  server: 190.93.247.165
+  port: 443
+  network: ws
+  tls: true
+  servername: lj.kpcloud.eu.org
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: lj.kpcloud.eu.org
+- name: a1315b-Telegram:@config_proxy 🔥
+  uuid: 60e827e8-db5b-4635-9fa2-793e37a81be1
+  type: vless
+  encryption: none
+  server: tunnyl.ru
+  port: 8443
+  network: tcp
+  tls: false
+  client-fingerprint: random
+- name: cea854-Telegram:@config_proxy 🔥
+  uuid: 401374e6-df77-41fb-f638-dad8184f175b
+  type: vless
+  encryption: none
+  server: pqh27v7.ipforvetra.shop
+  port: 80
+  network: grpc
+  tls: false
+- name: cd2c31-Telegram:@config_proxy 🔥
+  uuid: f1ba3023-59df-4295-81d9-43a12146b2f5
+  type: vless
+  encryption: none
+  server: 193.233.126.161
+  port: 443
+  network: tcp
+  tls: false
+- name: 411671-Telegram:@config_proxy 🔥
+  uuid: 2039e9dc-b295-4c4d-8d51-49896598d9d0
+  type: vless
+  encryption: none
+  server: 151.101.3.8
+  port: 80
+  network: tcp
+  tls: false
+- name: f456a9-Telegram:@config_proxy 🔥
+  uuid: 96b3be50-911f-454c-c7e0-ec988ac6bdbc
+  type: vless
+  encryption: none
+  server: www.speedtest.net
+  port: 80
+  network: tcp
+  tls: false
+- name: f3b41a-Telegram:@config_proxy 🔥
+  uuid: 95dc4f31-bf8c-4ca7-f887-557df66087f5
+  type: vless
+  encryption: none
+  server: joker.membergolabi.ir
+  port: 2095
+  network: tcp
+  tls: false
+- name: cd7a07-Telegram:@config_proxy 🔥
+  uuid: 96b3be50-911f-454c-c7e0-ec988ac6bdbc
+  type: vless
+  encryption: none
+  server: www.zula.ir
+  port: 80
+  network: tcp
+  tls: false
+- name: c06a4c-Telegram:@config_proxy 🔥
+  uuid: c4fa89d4-fcb9-48ba-adbc-665181cc817f
+  type: vless
+  encryption: none
+  server: 15.204.192.150
+  port: 443
+  network: tcp
+  tls: true
+  servername: 147135010072.sec21org.com
+- name: 773e25-Telegram:@config_proxy 🔥
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 94.131.118.39
+  port: 8880
+  network: grpc
+  tls: false
+- name: 679159-Telegram:@config_proxy 🔥
+  uuid: e35fda34-f99e-4711-9e0c-79f2aadea7e0
+  type: vless
+  encryption: none
+  server: 151.101.3.8
+  port: 80
+  network: tcp
+  tls: false
+- name: 8f21e3-Telegram:@config_proxy 🔥
+  uuid: 07a39b04-ae59-43eb-aee0-e277abe116f7
+  type: vless
+  encryption: none
+  server: am288.amin-1.ir
+  port: 2082
+  network: xhttp
+  tls: false
+- name: 3e985c-Telegram:@config_proxy 🔥
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 94.232.247.177
+  port: 8880
+  network: grpc
+  tls: false
+- name: b02372-Telegram:@config_proxy 🔥
+  uuid: 45b4e9f3-8db2-47a4-cdb5-d37c6f1715a2
+  type: vless
+  encryption: none
+  server: www.speedtest.net
+  port: 2086
+  network: httpupgrade
+  tls: false
+- name: 25e6b9-Telegram:@config_proxy 🔥
+  uuid: 6f451dad-5eb9-49b2-900d-b871aa88193b
+  type: vless
+  encryption: none
+  server: masterserver1.de.huqpmfood.ir
+  port: 1331
+  network: xhttp
+  tls: false
+  client-fingerprint: chrome
+- name: ac3f11-Telegram:@config_proxy 🔥
+  uuid: 8bf5c07a-acd3-4360-b940-62d6b77699af
+  type: vless
+  encryption: none
+  server: 104.16.53.11
+  port: 8080
+  network: httpupgrade
+  tls: false
+- name: 2e2953-Telegram:@config_proxy 💦
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 185.231.205.167
+  port: 8880
+  network: grpc
+  tls: false
+- name: f93ac9-Telegram:@config_proxy 💦
+  uuid: 4f8b80d1-667e-4ab5-9285-0fbd0e3dcab2
+  type: vless
+  encryption: none
+  server: uk29.clearorbitllc.com
+  port: 443
+  network: tcp
+  tls: false
+  client-fingerprint: chrome
+- name: 532da8-Telegram:@config_proxy 💦
+  uuid: 401374e6-df77-41fb-f638-dad8184f175b
+  type: vless
+  encryption: none
+  server: 45.82.251.145
+  port: 80
+  network: grpc
+  tls: false
+- name: 808884-Telegram:@config_proxy 💦
+  uuid: 83e57c25-1c8e-429f-974f-e3bde3fff12d
+  type: vless
+  encryption: none
+  server: pl.nnvpn.io
+  port: 443
+  network: tcp
+  tls: false
+- name: 9e1503-Telegram:@config_proxy 💦
+  uuid: ca2e23cb-2d9a-4812-d713-506f91d3735f
+  type: vless
+  encryption: none
+  server: 81.91.179.17
+  port: 8880
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+- name: f1c08d-Telegram:@config_proxy 🔥
+  uuid: 7f4c0be2-73ce-4620-b502-8bbd6ba9b6ef
+  type: vless
+  encryption: none
+  server: 193.46.81.151
+  port: 50853
+  network: tcp
+  tls: false
+  client-fingerprint: chrome
+- name: 096e4a-Telegram:@config_proxy 🔥
+  uuid: b2f81360-2dd4-4e17-9bcf-a95c314052f7
+  type: vless
+  encryption: none
+  server: 172.66.40.99
+  port: 80
+  network: xhttpr♡ya@freenettir
+  tls: false
+- name: aac020-Telegram:@config_proxy 🔥
+  uuid: 17e31214-700b-4f76-8088-df2b0cbe8d39
+  type: vless
+  encryption: none
+  server: 104.18.36.24
+  port: 2053
+  network: tcp
+  tls: false
+- name: 8542c8-Telegram:@config_proxy 🔥
+  uuid: 18ad13fd-ad41-47b5-8c14-2f29403a5ef1
+  type: vless
+  encryption: none
+  server: rayphoriahub.iranfastshop.ir
+  port: 7401
+  network: tcp
+  tls: false
+  client-fingerprint: chrome
+- name: 2443ef-Telegram:@config_proxy 🔥
+  uuid: d36e850d-4ef4-43b9-a894-21ae987cc897
+  type: vless
+  encryption: none
+  server: sana.mehdikarimi3.ir
+  port: 5505
+  network: tcp
+  tls: false
+  client-fingerprint: firefox
+- name: cbb621-Telegram:@config_proxy 🔥
+  uuid: 1b715b44-fcaf-4935-b192-78a32456e557
+  type: vless
+  encryption: none
+  server: 5.75.196.88
+  port: 19035
+  network: tcp
+  tls: false
+- name: 151556-Telegram:@config_proxy 🔥
+  uuid: 64bf9c97-212c-4814-ad17-f8539b53a8bd
+  type: vless
+  encryption: none
+  server: wangcai250.cloudflare.182682.xyz
+  port: 2096
+  network: ws
+  tls: true
+  servername: vless.pengjiajin.sbs
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: vless.pengjiajin.sbs
+- name: 0579bb-Telegram:@config_proxy 🔥
+  uuid: 02334dc7-5535-4909-a972-07d1d937ea3f
+  type: vless
+  encryption: none
+  server: 80.242.56.200
+  port: 8444
+  network: tcp
+  tls: false
+  client-fingerprint: chrome
+- name: ab76bf-Telegram:@config_proxy 🔥
+  uuid: 7556317c-dff6-46e8-ad29-b408f2a6456e
+  type: vless
+  encryption: none
+  server: 192.0.54.253
+  port: 2096
+  network: ws
+  tls: true
+  servername: vless.muzheng.top
+  ws-opts:
+    path: /Telegram🇨🇳 @WangCai2 /?ed=2560
+    headers:
+      Host: vless.muzheng.top
+- name: 604860-Telegram:@config_proxy 🔥
+  uuid: 1b715b44-fcaf-4935-b192-78a32456e557
+  type: vless
+  encryption: none
+  server: 5.75.196.88
+  port: 19035
+  network: tcp
+  tls: false
+- name: ba6fa7-Telegram:@config_proxy 🔥
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 94.232.247.177
+  port: 8880
+  network: grpc
+  tls: false
+- name: 396ea6-Telegram:@config_proxy 🔥
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 171.22.114.201
+  port: 8880
+  network: grpc
+  tls: false
+- name: 5c9228-Telegram:@config_proxy 🔥
+  uuid: 401374e6-df77-41fb-f638-dad8184f175b
+  type: vless
+  encryption: none
+  server: 45.82.251.145
+  port: 80
+  network: grpc
+  tls: false
+- name: f51875-Telegram:@config_proxy 🔥
+  uuid: 1b715b44-fcaf-4935-b192-78a32456e557
+  type: vless
+  encryption: none
+  server: 5.75.196.88
+  port: 19035
+  network: tcp
+  tls: false
+- name: 01bec2-Telegram:@config_proxy 🔥
+  uuid: e999db7a-1b17-4da6-bc37-c9fa24af2e93
+  type: vless
+  encryption: none
+  server: www.speedtest.net
+  port: 2096
+  network: ws
+  tls: true
+  servername: Jd03Md9Z5o.ZaNtRiVeLoQ.iNfO
+  ws-opts:
+    path: /
+- name: 1dcdbf-Telegram:@config_proxy 🔥
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 185.234.64.12
+  port: 8880
+  network: grpc
+  tls: false
+- name: 53dbdc-Telegram:@config_proxy 🔥
+  uuid: f4b69ef0-d4b9-4ad5-954e-0c98fc169fce
+  type: vless
+  encryption: none
+  server: 91.98.233.176
+  port: 24199
+  network: tcp
+  tls: false
+- name: 0f1a22-Telegram:@config_proxy 🔥
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 171.22.114.244
+  port: 8880
+  network: grpc
+  tls: false
+- name: d18876-Telegram:@config_proxy 💦
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 185.231.205.167
+  port: 8880
+  network: grpc
+  tls: false
+- name: 425a14-Telegram:@config_proxy 💦
+  uuid: 4f8b80d1-667e-4ab5-9285-0fbd0e3dcab2
+  type: vless
+  encryption: none
+  server: uk29.clearorbitllc.com
+  port: 443
+  network: tcp
+  tls: false
+  client-fingerprint: chrome
+- name: 6f9a4f-Telegram:@config_proxy 💦
+  uuid: 401374e6-df77-41fb-f638-dad8184f175b
+  type: vless
+  encryption: none
+  server: 45.82.251.145
+  port: 80
+  network: grpc
+  tls: false
+- name: d53437-Telegram:@config_proxy 💦
+  uuid: 83e57c25-1c8e-429f-974f-e3bde3fff12d
+  type: vless
+  encryption: none
+  server: pl.nnvpn.io
+  port: 443
+  network: tcp
+  tls: false
+- name: ae0f8b-Telegram:@config_proxy 💦
+  uuid: ca2e23cb-2d9a-4812-d713-506f91d3735f
+  type: vless
+  encryption: none
+  server: 81.91.179.17
+  port: 8880
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+- name: dfc84a-Telegram:@config_proxy 💦
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 171.22.114.88
+  port: 8880
+  network: grpc
+  tls: false
+- name: 373141-Telegram:@config_proxy 🔥
+  uuid: 6b9d460e-af07-4504-868e-1556ed7c71e4
+  type: vless
+  encryption: none
+  server: test2.amin8263.ir
+  port: 2095
+  network: ws
+  tls: false
+  ws-opts:
+    path: /@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam?ed=2048
+    headers:
+      Host: test3.amin8263.ir
+- name: 038a59-Telegram:@config_proxy 🔥
+  uuid: 66b5be65-9203-45fb-9af5-d2f79eef7d8b
+  type: vless
+  encryption: none
+  server: test.fast.hosting-ip.com
+  port: 80
+  network: xhttp
+  tls: false
+- name: 5188a9-Telegram:@config_proxy 🔥
+  uuid: 9e003436-1354-4510-8dd6-5834dc1e7829
+  type: vless
+  encryption: none
+  server: 91.99.177.121
+  port: 55778
+  network: tcp
+  tls: false
+- name: 972e75-Telegram:@config_proxy 🔥
+  uuid: ddab5550-3938-4aba-943c-f23a08d07dc5
+  type: vless
+  encryption: none
+  server: alhilal.com
+  port: 443
+  network: ws
+  tls: true
+  servername: rAyAn-cOnFiG-pl-1.pArSa.dPdNs.oRg
+  client-fingerprint: chrome
+  ws-opts:
+    path: /ws
+    headers:
+      Host: rAyAn-cOnFiG-pl-1.pArSa.dPdNs.oRg
+- name: dd446b-Telegram:@config_proxy 🔥
+  uuid: 95dc4f31-bf8c-4ca7-f887-557df66087f5
+  type: vless
+  encryption: none
+  server: www.speedtest.net
+  port: 2095
+  network: ws
+  tls: false
+  ws-opts:
+    path: /TELEGRAM--BYA--CHANEL----@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN--@JKVPN---@JKVPN---@JKVPN---@JKVPN?ed=2048
+    headers:
+      Host: joKer.mEmBerGolaBi.IR
+- name: bb544a-Telegram:@config_proxy 🔥
+  uuid: 95dc4f31-bf8c-4ca7-f887-557df66087f5
+  type: vless
+  encryption: none
+  server: joker.membergolabi.ir
+  port: 2095
+  network: ws
+  tls: false
+  ws-opts:
+    path: /TELEGRAM--BYA--CHANEL----@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN--@JKVPN---@JKVPN---@JKVPN---@JKVPN?ed=2048
+    headers:
+      Host: joKer.mEmBerGolaBi.IR
+- name: 3e01c0-Telegram:@config_proxy 🔥
+  uuid: 10f153ab-96f0-48ee-bbff-62258f3a592e
+  type: vless
+  encryption: none
+  server: www.speedtest.net
+  port: 2086
+  network: httpupgrade
+  tls: false
+- name: db6c00-Telegram:@config_proxy 🔥
+  uuid: 85a92916-74c7-1c99-95a6-72f4cff986f2
+  type: vless
+  encryption: none
+  server: ttt.xxxxxx-god.xyz
+  port: 4433
+  network: tcp
+  tls: false
+- name: 2cc1b8-Telegram:@config_proxy 🔥
+  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
+  type: vless
+  encryption: none
+  server: 190.93.245.253
+  port: 2096
+  network: ws
+  tls: true
+  servername: gaosir.unfeeling.sbs
+  ws-opts:
+    path: /Telegram🇨🇳 @WangCai2 /?ed=2560
+    headers:
+      Host: gaosir.unfeeling.sbs
+- name: 5aa809-Telegram:@config_proxy 🔥
+  uuid: 3dcaac08-e7d7-4828-b229-d886d8a5661a
+  type: vless
+  encryption: none
+  server: cloudfire.ir
+  port: 443
+  network: ws
+  tls: true
+  servername: toyota38.com
+  alpn:
+  - h3
+  - h2
+  - http/1.1
+  client-fingerprint: random
+  ws-opts:
+    path: /nlxs5P9vmukQHnOn/OTEuOTkuMTA5LjIwNw==?ed=2560
+    headers:
+      Host: arashhanoozgohmikhore.com
+- name: 4b53a2-Telegram:@config_proxy 🔥
+  uuid: 56836323-a082-419d-af18-1343f31ea90f
+  type: vless
+  encryption: none
+  server: 104.17.147.22
+  port: 443
+  network: ws
+  tls: true
+  servername: q.dioxv011.workers.dev
+  alpn:
+  - h3
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: q.dioxv011.workers.dev
+- name: 2e6d2b-Telegram:@config_proxy 🔥
+  uuid: 86304c46-fdb9-49c4-f9fd-337007396ea5
+  type: vless
+  encryption: none
+  server: www.speedtest.net
+  port: 2087
+  network: ws
+  tls: false
+  ws-opts:
+    path: /@Archive_Android--------@Archive_Android--------@Archive_Android--------@Archive_Android--------@Archive_Android--------@Archive_Android--------@Archive_Android--------@Archive_Android--------@Archive_Android--------@Archive_Android--------@Archive_Android--------@Archive_Android--------@Archive_Android--------@Archive_Android--------@Archive_Android--------@Archive_Android--------@Archive_Android--
+- name: fd25a9-Telegram:@config_proxy 🔥
+  uuid: c297710c-ac33-4817-a8ff-2368d76dc6b0
+  type: vless
+  encryption: none
+  server: 84.201.4.247
+  port: 15988
+  network: grpc
+  tls: false
+- name: c74b66-Telegram:@config_proxy 🔥
+  uuid: c30fee5c-a1ba-4828-8c6b-ac509d7342e3
+  type: vless
+  encryption: none
+  server: store-static-portal.cyberscaler.net
+  port: 10082
+  network: tcp
+  tls: false
+  client-fingerprint: chrome
+- name: 92c128-Telegram:@config_proxy 💦
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 185.231.205.167
+  port: 8880
+  network: grpc
+  tls: false
+- name: a226de-Telegram:@config_proxy 💦
+  uuid: 4f8b80d1-667e-4ab5-9285-0fbd0e3dcab2
+  type: vless
+  encryption: none
+  server: uk29.clearorbitllc.com
+  port: 443
+  network: tcp
+  tls: false
+  client-fingerprint: chrome
+- name: 21a4ec-Telegram:@config_proxy 💦
+  uuid: 401374e6-df77-41fb-f638-dad8184f175b
+  type: vless
+  encryption: none
+  server: 45.82.251.145
+  port: 80
+  network: grpc
+  tls: false
+- name: 9a1703-Telegram:@config_proxy 💦
+  uuid: 83e57c25-1c8e-429f-974f-e3bde3fff12d
+  type: vless
+  encryption: none
+  server: pl.nnvpn.io
+  port: 443
+  network: tcp
+  tls: false
+- name: 071ef7-Telegram:@config_proxy 💦
+  uuid: ca2e23cb-2d9a-4812-d713-506f91d3735f
+  type: vless
+  encryption: none
+  server: 81.91.179.17
+  port: 8880
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+- name: afbeea-Telegram:@config_proxy 💦
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 171.22.114.88
+  port: 8880
+  network: grpc
+  tls: false
+- name: 20e9c5-Telegram:@config_proxy 🔥
+  uuid: 66ee52e0-84d3-4a6f-df81-e2d359649de4
+  type: vless
+  encryption: none
+  server: 104.21.65.149
+  port: 2095
+  network: ws
+  tls: false
+  ws-opts:
+    path: /@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam/@XpnTeam?ed=2048
+    headers:
+      Host: test3.amin8263.ir
+- name: cc4c0a-Telegram:@config_proxy 🔥
+  uuid: 507c7932-4074-4cd2-a7a2-74205abbc588
+  type: vless
+  encryption: none
+  server: br.pouriau.com
+  port: 2052
+  network: ws
+  tls: false
+  ws-opts:
+    path: /---ping---www.speedtest.net?ed=2080/?TELEGRAM--KANAL--JKVPN--JKVPN--JKVPN--JKVPN--JKVPN--JKVPN
+    headers:
+      Host: www.speedtest.net.fatsly.com.xziba.com.1.xziba.com.
+- name: 0876b2-Telegram:@config_proxy 🔥
+  uuid: 732f088b-4a6d-4ece-ec42-0f6afaf01313
+  type: vless
+  encryption: none
+  server: v2rayfree1join.ddns.net
+  port: 2053
+  network: grpc
+  tls: true
+  servername: gr.newv2rayfree1.shop
+- name: c1063d-Telegram:@config_proxy 🔥
+  uuid: 1eb58333-3051-47c2-a2eb-44e5b64233c8
+  type: vless
+  encryption: none
+  server: 192.238.204.48
+  port: 55558
+  network: tcp
+  tls: true
+  servername: apple.com
+  client-fingerprint: chrome
+- name: 6b6ea7-Telegram:@config_proxy 🔥
+  uuid: 35372035-3320-4438-a035-312035342031
+  type: vless
+  encryption: none
+  server: 57.129.15.177
+  port: 8442
+  network: tcp
+  tls: false
+  client-fingerprint: chrome
+- name: a6964f-Telegram:@config_proxy 🔥
+  uuid: 26874748-86d4-4c3e-a3c6-2c56618cf801
+  type: vless
+  encryption: none
+  server: chat.deepseek.com
+  port: 80
+  network: ws
+  tls: false
+  ws-opts:
+    path: /olem/ws?ed=1024
+    headers:
+      Host: fin.channel.digicyber.click
+- name: 790e00-Telegram:@config_proxy 🔥
+  uuid: 3604197f-3bca-44cb-f834-7c5d3efe4835
+  type: vless
+  encryption: none
+  server: hqv2ray.fast.hosting-ip.com
+  port: 80
+  network: tcp
+  tls: false
+- name: 3ee702-Telegram:@config_proxy 🔥
+  uuid: d36e850d-4ef4-43b9-a894-21ae987cc897
+  type: vless
+  encryption: none
+  server: sana.mehdikarimi3.ir
+  port: 5505
+  network: tcp
+  tls: false
+  client-fingerprint: firefox
+- name: e32bc8-Telegram:@config_proxy 🔥
+  uuid: 02334dc7-5535-4909-a972-07d1d937ea3f
+  type: vless
+  encryption: none
+  server: 80.242.56.200
+  port: 8444
+  network: tcp
+  tls: false
+  client-fingerprint: chrome
+- name: 5d2722-Telegram:@config_proxy 🔥
+  uuid: 1ba72f40-2c70-412f-b6c5-8da85eda7a2d
+  type: vless
+  encryption: none
+  server: 151.101.3.8
+  port: 80
+  network: xhttp
+  tls: false
+- name: 1d9278-Telegram:@config_proxy 🔥
+  uuid: cb84528f-f033-40bc-9723-2f0ae3e98c0b
+  type: vless
+  encryption: none
+  server: am8.amin-1.ir
+  port: 2082
+  network: xhttp
+  tls: false
+- name: d4553d-Telegram:@config_proxy 🔥
+  uuid: d5c1b5d7-055b-4457-bc3a-6e99919c1bcb
+  type: vless
+  encryption: none
+  server: 94.131.104.178
+  port: 443
+  network: raw
+  tls: false
+  client-fingerprint: firefox
+- name: 2b1d73-Telegram:@config_proxy 🔥
+  uuid: 9d847ad3-1896-48f9-b89c-13fe345e2bff
+  type: vless
+  encryption: none
+  server: 104.21.48.1
+  port: 443
+  network: xhttp
+  tls: true
+  servername: cho.chonon.sbs
+  alpn:
+  - h3
+  client-fingerprint: chrome
+- name: 8ad55f-Telegram:@config_proxy 💦
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 185.231.205.167
+  port: 8880
+  network: grpc
+  tls: false
+- name: 226842-Telegram:@config_proxy 💦
+  uuid: 4f8b80d1-667e-4ab5-9285-0fbd0e3dcab2
+  type: vless
+  encryption: none
+  server: uk29.clearorbitllc.com
+  port: 443
+  network: tcp
+  tls: false
+  client-fingerprint: chrome
+- name: 48bf58-Telegram:@config_proxy 💦
+  uuid: 401374e6-df77-41fb-f638-dad8184f175b
+  type: vless
+  encryption: none
+  server: 45.82.251.145
+  port: 80
+  network: grpc
+  tls: false
+- name: 0dd189-Telegram:@config_proxy 💦
+  uuid: 83e57c25-1c8e-429f-974f-e3bde3fff12d
+  type: vless
+  encryption: none
+  server: pl.nnvpn.io
+  port: 443
+  network: tcp
+  tls: false
+- name: f1af24-Telegram:@config_proxy 💦
+  uuid: ca2e23cb-2d9a-4812-d713-506f91d3735f
+  type: vless
+  encryption: none
+  server: 81.91.179.17
+  port: 8880
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+- name: 11d63a-Telegram:@config_proxy 💦
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 171.22.114.88
+  port: 8880
+  network: grpc
+  tls: false
+- name: 9c1c59-Telegram:@config_proxy 💦
+  uuid: 6206bf1d-068d-4186-9eee-d534a01cb98e
+  type: vless
+  encryption: none
+  server: kazakhstan22.clearorbitllc.com
+  port: 443
+  network: tcp
+  tls: false
+  client-fingerprint: firefox
+- name: e0ee66-Telegram:@config_proxy 💦
+  uuid: c924d667-d2da-40fe-bbb5-52e3eeef6c48
+  type: vless
+  encryption: none
+  server: s5.cloudconvert.top
+  port: 443
+  network: tcp
+  tls: false
+- name: ddcfbb-Telegram:@config_proxy 🔥
+  uuid: 08704c01-7edb-454a-98a2-328ccb9936fa
+  type: vless
+  encryption: none
+  server: 45.88.183.156
+  port: 12794
+  network: tcp
+  tls: false
+- name: c395d3-Telegram:@config_proxy 🔥
+  uuid: 29187857-4a1f-4d1e-88eb-0016771e0dbb
+  type: vless
+  encryption: none
+  server: 162.159.152.53
+  port: 443
+  network: ws
+  tls: true
+  servername: vless.hubp.de
+  alpn:
+  - h3
+  client-fingerprint: chrome
+- name: 4d6abc-Telegram:@config_proxy 🔥
+  uuid: da6f3c91-ddf9-41eb-8a22-87d9f1301a3d
+  type: vless
+  encryption: none
+  server: makan.mo-chephosting.ir
+  port: 2095
+  network: tcp
+  tls: false
+- name: 9b8d49-Telegram:@config_proxy 🔥
+  uuid: Free_HTTPCustom
+  type: vless
+  encryption: none
+  server: free-httpcustom1free-httpcustom-free-httpcustom-free-httpcustom.httpcustom.ir
+  port: 443
+  network: xhttp
+  tls: true
+  servername: 4free.httpcustom.ir
+  alpn:
+  - h2
+  client-fingerprint: firefox
+- name: 6c09e0-Telegram:@config_proxy 🔥
+  uuid: 4d89daf8-83c1-497d-af73-0d0033daadd8
+  type: vless
+  encryption: none
+  server: 104.21.36.57
+  port: 443
+  network: ws
+  tls: true
+  servername: psto.fullmargintraders.com
+  ws-opts:
+    path: /wsv/4d89daf8-83c1-497d-af73-0d0033daadd8
+    headers:
+      Host: psto.fullmargintraders.com
+- name: a85240-Telegram:@config_proxy 🔥
+  uuid: Parsashonam-313
+  type: vless
+  encryption: none
+  server: 116.203.201.167
+  port: 443
+  network: tcp
+  tls: false
+- name: 15f77d-Telegram:@config_proxy 🔥
+  uuid: b41b3c10-91f1-42ed-b597-2ebdaddb9a96
+  type: vless
+  encryption: none
+  server: india2.clearorbitllc.com
+  port: 443
+  network: tcp
+  tls: false
+  client-fingerprint: chrome
+- name: 0fd21a-Telegram:@config_proxy 🔥
+  uuid: 9daf8f3e-089b-4989-9502-dd3d727edb6c
+  type: vless
+  encryption: none
+  server: usa32.clearorbitllc.com
+  port: 443
+  network: tcp
+  tls: false
+  client-fingerprint: chrome
+- name: 8ea56c-Telegram:@config_proxy 💦
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 185.231.205.167
+  port: 8880
+  network: grpc
+  tls: false
+- name: b5dcdc-Telegram:@config_proxy 💦
+  uuid: 401374e6-df77-41fb-f638-dad8184f175b
+  type: vless
+  encryption: none
+  server: 45.82.251.145
+  port: 80
+  network: grpc
+  tls: false
+- name: 9e6ad4-Telegram:@config_proxy 💦
+  uuid: 83e57c25-1c8e-429f-974f-e3bde3fff12d
+  type: vless
+  encryption: none
+  server: pl.nnvpn.io
+  port: 443
+  network: tcp
+  tls: false
+- name: ebe168-Telegram:@config_proxy 💦
+  uuid: ca2e23cb-2d9a-4812-d713-506f91d3735f
+  type: vless
+  encryption: none
+  server: 81.91.179.17
+  port: 8880
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+- name: 91e4ec-Telegram:@config_proxy 💦
+  uuid: df0680ca-e43c-498d-ed86-8e196eedd012
+  type: vless
+  encryption: none
+  server: 171.22.114.88
+  port: 8880
+  network: grpc
+  tls: false
+- name: 254feb-Telegram:@config_proxy 💦
+  uuid: 6206bf1d-068d-4186-9eee-d534a01cb98e
+  type: vless
+  encryption: none
+  server: kazakhstan22.clearorbitllc.com
+  port: 443
+  network: tcp
+  tls: false
+  client-fingerprint: firefox
+- name: c97070-Telegram:@config_proxy 💦
+  uuid: c924d667-d2da-40fe-bbb5-52e3eeef6c48
+  type: vless
+  encryption: none
+  server: s5.cloudconvert.top
+  port: 443
+  network: tcp
+  tls: false
+- name: 4f3782-Telegram:@config_proxy 🔥
+  uuid: b5991ab6-76c0-45c5-ab96-886e5430b90a
+  type: vless
+  encryption: none
+  server: join.filterk0sh.fastly80-3.hosting-ip.com
+  port: 80
+  network: grpc
+  tls: false
+- name: 7cdf0c-Telegram:@config_proxy 🔥
+  uuid: a42343e4-c498-42b7-8361-c03a36e7a5fb
+  type: vless
+  encryption: none
+  server: 46.62.220.103
+  port: 27802
+  network: grpc
+  tls: true
+  servername: offged.sahandconfig.ir
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - DIRECT
+  - af390b-Telegram:@config_proxy 💦
+  - 0aa32f-Telegram:@config_proxy 💦
+  - 2596ea-Telegram:@config_proxy 💦
+  - 0fefe4-Telegram:@config_proxy 💦
+  - d1135e-Telegram:@config_proxy 💦
+  - c78bfd-Telegram:@config_proxy 🔥
+  - bc5711-Telegram:@config_proxy 🔥
+  - a9325b-Telegram:@config_proxy 🔥
+  - f648ef-Telegram:@config_proxy 🔥
+  - b8c704-Telegram:@config_proxy 🔥
+  - c0c926-Telegram:@config_proxy 💦
+  - 17c96c-Telegram:@config_proxy 💦
+  - 178d3b-Telegram:@config_proxy 💦
+  - 5d0e0e-Telegram:@config_proxy 💦
+  - 60e9eb-Telegram:@config_proxy 💦
+  - 04a77a-Telegram:@config_proxy 🔥
+  - b30335-Telegram:@config_proxy 🔥
+  - cd505d-Telegram:@config_proxy 🔥
+  - 7d3b8b-Telegram:@config_proxy 🔥
+  - d6025c-Telegram:@config_proxy 🔥
+  - fdfff8-Telegram:@config_proxy 🔥
+  - 2d9b56-Telegram:@config_proxy 🔥
+  - adc2ec-Telegram:@config_proxy 🔥
+  - 64db55-Telegram:@config_proxy 🔥
+  - 1265ea-Telegram:@config_proxy 🔥
+  - 685094-Telegram:@config_proxy 🔥
+  - dff0a0-Telegram:@config_proxy 🔥
+  - a73959-Telegram:@config_proxy 🔥
+  - 0a5078-Telegram:@config_proxy 🔥
+  - e3a636-Telegram:@config_proxy 💦
+  - e20181-Telegram:@config_proxy 💦
+  - 155b77-Telegram:@config_proxy 💦
+  - fc1e73-Telegram:@config_proxy 💦
+  - 9b4031-Telegram:@config_proxy 💦
+  - d94837-Telegram:@config_proxy 🔥
+  - 510292-Telegram:@config_proxy 🔥
+  - a1315b-Telegram:@config_proxy 🔥
+  - cea854-Telegram:@config_proxy 🔥
+  - cd2c31-Telegram:@config_proxy 🔥
+  - 411671-Telegram:@config_proxy 🔥
+  - f456a9-Telegram:@config_proxy 🔥
+  - f3b41a-Telegram:@config_proxy 🔥
+  - cd7a07-Telegram:@config_proxy 🔥
+  - c06a4c-Telegram:@config_proxy 🔥
+  - 773e25-Telegram:@config_proxy 🔥
+  - 679159-Telegram:@config_proxy 🔥
+  - 8f21e3-Telegram:@config_proxy 🔥
+  - 3e985c-Telegram:@config_proxy 🔥
+  - b02372-Telegram:@config_proxy 🔥
+  - 25e6b9-Telegram:@config_proxy 🔥
+  - ac3f11-Telegram:@config_proxy 🔥
+  - 2e2953-Telegram:@config_proxy 💦
+  - f93ac9-Telegram:@config_proxy 💦
+  - 532da8-Telegram:@config_proxy 💦
+  - 808884-Telegram:@config_proxy 💦
+  - 9e1503-Telegram:@config_proxy 💦
+  - f1c08d-Telegram:@config_proxy 🔥
+  - 096e4a-Telegram:@config_proxy 🔥
+  - aac020-Telegram:@config_proxy 🔥
+  - 8542c8-Telegram:@config_proxy 🔥
+  - 2443ef-Telegram:@config_proxy 🔥
+  - cbb621-Telegram:@config_proxy 🔥
+  - 151556-Telegram:@config_proxy 🔥
+  - 0579bb-Telegram:@config_proxy 🔥
+  - ab76bf-Telegram:@config_proxy 🔥
+  - 604860-Telegram:@config_proxy 🔥
+  - ba6fa7-Telegram:@config_proxy 🔥
+  - 396ea6-Telegram:@config_proxy 🔥
+  - 5c9228-Telegram:@config_proxy 🔥
+  - f51875-Telegram:@config_proxy 🔥
+  - 01bec2-Telegram:@config_proxy 🔥
+  - 1dcdbf-Telegram:@config_proxy 🔥
+  - 53dbdc-Telegram:@config_proxy 🔥
+  - 0f1a22-Telegram:@config_proxy 🔥
+  - d18876-Telegram:@config_proxy 💦
+  - 425a14-Telegram:@config_proxy 💦
+  - 6f9a4f-Telegram:@config_proxy 💦
+  - d53437-Telegram:@config_proxy 💦
+  - ae0f8b-Telegram:@config_proxy 💦
+  - dfc84a-Telegram:@config_proxy 💦
+  - 373141-Telegram:@config_proxy 🔥
+  - 038a59-Telegram:@config_proxy 🔥
+  - 5188a9-Telegram:@config_proxy 🔥
+  - 972e75-Telegram:@config_proxy 🔥
+  - dd446b-Telegram:@config_proxy 🔥
+  - bb544a-Telegram:@config_proxy 🔥
+  - 3e01c0-Telegram:@config_proxy 🔥
+  - db6c00-Telegram:@config_proxy 🔥
+  - 2cc1b8-Telegram:@config_proxy 🔥
+  - 5aa809-Telegram:@config_proxy 🔥
+  - 4b53a2-Telegram:@config_proxy 🔥
+  - 2e6d2b-Telegram:@config_proxy 🔥
+  - fd25a9-Telegram:@config_proxy 🔥
+  - c74b66-Telegram:@config_proxy 🔥
+  - 92c128-Telegram:@config_proxy 💦
+  - a226de-Telegram:@config_proxy 💦
+  - 21a4ec-Telegram:@config_proxy 💦
+  - 9a1703-Telegram:@config_proxy 💦
+  - 071ef7-Telegram:@config_proxy 💦
+  - afbeea-Telegram:@config_proxy 💦
+  - 20e9c5-Telegram:@config_proxy 🔥
+  - cc4c0a-Telegram:@config_proxy 🔥
+  - 0876b2-Telegram:@config_proxy 🔥
+  - c1063d-Telegram:@config_proxy 🔥
+  - 6b6ea7-Telegram:@config_proxy 🔥
+  - a6964f-Telegram:@config_proxy 🔥
+  - 790e00-Telegram:@config_proxy 🔥
+  - 3ee702-Telegram:@config_proxy 🔥
+  - e32bc8-Telegram:@config_proxy 🔥
+  - 5d2722-Telegram:@config_proxy 🔥
+  - 1d9278-Telegram:@config_proxy 🔥
+  - d4553d-Telegram:@config_proxy 🔥
+  - 2b1d73-Telegram:@config_proxy 🔥
+  - 8ad55f-Telegram:@config_proxy 💦
+  - 226842-Telegram:@config_proxy 💦
+  - 48bf58-Telegram:@config_proxy 💦
+  - 0dd189-Telegram:@config_proxy 💦
+  - f1af24-Telegram:@config_proxy 💦
+  - 11d63a-Telegram:@config_proxy 💦
+  - 9c1c59-Telegram:@config_proxy 💦
+  - e0ee66-Telegram:@config_proxy 💦
+  - ddcfbb-Telegram:@config_proxy 🔥
+  - c395d3-Telegram:@config_proxy 🔥
+  - 4d6abc-Telegram:@config_proxy 🔥
+  - 9b8d49-Telegram:@config_proxy 🔥
+  - 6c09e0-Telegram:@config_proxy 🔥
+  - a85240-Telegram:@config_proxy 🔥
+  - 15f77d-Telegram:@config_proxy 🔥
+  - 0fd21a-Telegram:@config_proxy 🔥
+  - 8ea56c-Telegram:@config_proxy 💦
+  - b5dcdc-Telegram:@config_proxy 💦
+  - 9e6ad4-Telegram:@config_proxy 💦
+  - ebe168-Telegram:@config_proxy 💦
+  - 91e4ec-Telegram:@config_proxy 💦
+  - 254feb-Telegram:@config_proxy 💦
+  - c97070-Telegram:@config_proxy 💦
+  - 4f3782-Telegram:@config_proxy 🔥
+  - 7cdf0c-Telegram:@config_proxy 🔥
+- name: ♻️ 自动选择
+  type: url-test
+  proxies:
+  - af390b-Telegram:@config_proxy 💦
+  - 0aa32f-Telegram:@config_proxy 💦
+  - 2596ea-Telegram:@config_proxy 💦
+  - 0fefe4-Telegram:@config_proxy 💦
+  - d1135e-Telegram:@config_proxy 💦
+  - c78bfd-Telegram:@config_proxy 🔥
+  - bc5711-Telegram:@config_proxy 🔥
+  - a9325b-Telegram:@config_proxy 🔥
+  - f648ef-Telegram:@config_proxy 🔥
+  - b8c704-Telegram:@config_proxy 🔥
+  - c0c926-Telegram:@config_proxy 💦
+  - 17c96c-Telegram:@config_proxy 💦
+  - 178d3b-Telegram:@config_proxy 💦
+  - 5d0e0e-Telegram:@config_proxy 💦
+  - 60e9eb-Telegram:@config_proxy 💦
+  - 04a77a-Telegram:@config_proxy 🔥
+  - b30335-Telegram:@config_proxy 🔥
+  - cd505d-Telegram:@config_proxy 🔥
+  - 7d3b8b-Telegram:@config_proxy 🔥
+  - d6025c-Telegram:@config_proxy 🔥
+  - fdfff8-Telegram:@config_proxy 🔥
+  - 2d9b56-Telegram:@config_proxy 🔥
+  - adc2ec-Telegram:@config_proxy 🔥
+  - 64db55-Telegram:@config_proxy 🔥
+  - 1265ea-Telegram:@config_proxy 🔥
+  - 685094-Telegram:@config_proxy 🔥
+  - dff0a0-Telegram:@config_proxy 🔥
+  - a73959-Telegram:@config_proxy 🔥
+  - 0a5078-Telegram:@config_proxy 🔥
+  - e3a636-Telegram:@config_proxy 💦
+  - e20181-Telegram:@config_proxy 💦
+  - 155b77-Telegram:@config_proxy 💦
+  - fc1e73-Telegram:@config_proxy 💦
+  - 9b4031-Telegram:@config_proxy 💦
+  - d94837-Telegram:@config_proxy 🔥
+  - 510292-Telegram:@config_proxy 🔥
+  - a1315b-Telegram:@config_proxy 🔥
+  - cea854-Telegram:@config_proxy 🔥
+  - cd2c31-Telegram:@config_proxy 🔥
+  - 411671-Telegram:@config_proxy 🔥
+  - f456a9-Telegram:@config_proxy 🔥
+  - f3b41a-Telegram:@config_proxy 🔥
+  - cd7a07-Telegram:@config_proxy 🔥
+  - c06a4c-Telegram:@config_proxy 🔥
+  - 773e25-Telegram:@config_proxy 🔥
+  - 679159-Telegram:@config_proxy 🔥
+  - 8f21e3-Telegram:@config_proxy 🔥
+  - 3e985c-Telegram:@config_proxy 🔥
+  - b02372-Telegram:@config_proxy 🔥
+  - 25e6b9-Telegram:@config_proxy 🔥
+  - ac3f11-Telegram:@config_proxy 🔥
+  - 2e2953-Telegram:@config_proxy 💦
+  - f93ac9-Telegram:@config_proxy 💦
+  - 532da8-Telegram:@config_proxy 💦
+  - 808884-Telegram:@config_proxy 💦
+  - 9e1503-Telegram:@config_proxy 💦
+  - f1c08d-Telegram:@config_proxy 🔥
+  - 096e4a-Telegram:@config_proxy 🔥
+  - aac020-Telegram:@config_proxy 🔥
+  - 8542c8-Telegram:@config_proxy 🔥
+  - 2443ef-Telegram:@config_proxy 🔥
+  - cbb621-Telegram:@config_proxy 🔥
+  - 151556-Telegram:@config_proxy 🔥
+  - 0579bb-Telegram:@config_proxy 🔥
+  - ab76bf-Telegram:@config_proxy 🔥
+  - 604860-Telegram:@config_proxy 🔥
+  - ba6fa7-Telegram:@config_proxy 🔥
+  - 396ea6-Telegram:@config_proxy 🔥
+  - 5c9228-Telegram:@config_proxy 🔥
+  - f51875-Telegram:@config_proxy 🔥
+  - 01bec2-Telegram:@config_proxy 🔥
+  - 1dcdbf-Telegram:@config_proxy 🔥
+  - 53dbdc-Telegram:@config_proxy 🔥
+  - 0f1a22-Telegram:@config_proxy 🔥
+  - d18876-Telegram:@config_proxy 💦
+  - 425a14-Telegram:@config_proxy 💦
+  - 6f9a4f-Telegram:@config_proxy 💦
+  - d53437-Telegram:@config_proxy 💦
+  - ae0f8b-Telegram:@config_proxy 💦
+  - dfc84a-Telegram:@config_proxy 💦
+  - 373141-Telegram:@config_proxy 🔥
+  - 038a59-Telegram:@config_proxy 🔥
+  - 5188a9-Telegram:@config_proxy 🔥
+  - 972e75-Telegram:@config_proxy 🔥
+  - dd446b-Telegram:@config_proxy 🔥
+  - bb544a-Telegram:@config_proxy 🔥
+  - 3e01c0-Telegram:@config_proxy 🔥
+  - db6c00-Telegram:@config_proxy 🔥
+  - 2cc1b8-Telegram:@config_proxy 🔥
+  - 5aa809-Telegram:@config_proxy 🔥
+  - 4b53a2-Telegram:@config_proxy 🔥
+  - 2e6d2b-Telegram:@config_proxy 🔥
+  - fd25a9-Telegram:@config_proxy 🔥
+  - c74b66-Telegram:@config_proxy 🔥
+  - 92c128-Telegram:@config_proxy 💦
+  - a226de-Telegram:@config_proxy 💦
+  - 21a4ec-Telegram:@config_proxy 💦
+  - 9a1703-Telegram:@config_proxy 💦
+  - 071ef7-Telegram:@config_proxy 💦
+  - afbeea-Telegram:@config_proxy 💦
+  - 20e9c5-Telegram:@config_proxy 🔥
+  - cc4c0a-Telegram:@config_proxy 🔥
+  - 0876b2-Telegram:@config_proxy 🔥
+  - c1063d-Telegram:@config_proxy 🔥
+  - 6b6ea7-Telegram:@config_proxy 🔥
+  - a6964f-Telegram:@config_proxy 🔥
+  - 790e00-Telegram:@config_proxy 🔥
+  - 3ee702-Telegram:@config_proxy 🔥
+  - e32bc8-Telegram:@config_proxy 🔥
+  - 5d2722-Telegram:@config_proxy 🔥
+  - 1d9278-Telegram:@config_proxy 🔥
+  - d4553d-Telegram:@config_proxy 🔥
+  - 2b1d73-Telegram:@config_proxy 🔥
+  - 8ad55f-Telegram:@config_proxy 💦
+  - 226842-Telegram:@config_proxy 💦
+  - 48bf58-Telegram:@config_proxy 💦
+  - 0dd189-Telegram:@config_proxy 💦
+  - f1af24-Telegram:@config_proxy 💦
+  - 11d63a-Telegram:@config_proxy 💦
+  - 9c1c59-Telegram:@config_proxy 💦
+  - e0ee66-Telegram:@config_proxy 💦
+  - ddcfbb-Telegram:@config_proxy 🔥
+  - c395d3-Telegram:@config_proxy 🔥
+  - 4d6abc-Telegram:@config_proxy 🔥
+  - 9b8d49-Telegram:@config_proxy 🔥
+  - 6c09e0-Telegram:@config_proxy 🔥
+  - a85240-Telegram:@config_proxy 🔥
+  - 15f77d-Telegram:@config_proxy 🔥
+  - 0fd21a-Telegram:@config_proxy 🔥
+  - 8ea56c-Telegram:@config_proxy 💦
+  - b5dcdc-Telegram:@config_proxy 💦
+  - 9e6ad4-Telegram:@config_proxy 💦
+  - ebe168-Telegram:@config_proxy 💦
+  - 91e4ec-Telegram:@config_proxy 💦
+  - 254feb-Telegram:@config_proxy 💦
+  - c97070-Telegram:@config_proxy 💦
+  - 4f3782-Telegram:@config_proxy 🔥
+  - 7cdf0c-Telegram:@config_proxy 🔥
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+- name: 🎯 全球直连
+  type: select
+  proxies:
+  - DIRECT
+  - 🚀 节点选择
+  - ♻️ 自动选择
+- name: 🛑 全球拦截
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+- name: 🐟 漏网之鱼
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - 🎯 全球直连
+  - ♻️ 自动选择
+rules:
+- DOMAIN-SUFFIX,googleapis.com,🚀 节点选择
+- DOMAIN-SUFFIX,gstatic.com,🚀 节点选择
+- DOMAIN-SUFFIX,googleapis.cn,🚀 节点选择
+- DOMAIN-SUFFIX,ggpht.com,🚀 节点选择
+- DOMAIN-SUFFIX,google.com,🚀 节点选择
+- DOMAIN-SUFFIX,googleusercontent.com,🚀 节点选择
+- DOMAIN-SUFFIX,googlevideo.com,🚀 节点选择
+- DOMAIN-SUFFIX,youtube.com,🚀 节点选择
+- DOMAIN-SUFFIX,youtu.be,🚀 节点选择
+- DOMAIN-SUFFIX,ytimg.com,🚀 节点选择
+- DOMAIN-SUFFIX,facebook.com,🚀 节点选择
+- DOMAIN-SUFFIX,instagram.com,🚀 节点选择
+- DOMAIN-SUFFIX,whatsapp.net,🚀 节点选择
+- DOMAIN-SUFFIX,fbcdn.net,🚀 节点选择
+- DOMAIN-SUFFIX,twitter.com,🚀 节点选择
+- DOMAIN-SUFFIX,twimg.com,🚀 节点选择
+- DOMAIN-SUFFIX,telegram.org,🚀 节点选择
+- DOMAIN-SUFFIX,openai.com,🚀 节点选择
+- DOMAIN-SUFFIX,claude.ai,🚀 节点选择
+- DOMAIN-SUFFIX,anthropic.com,🚀 节点选择
+- DOMAIN-SUFFIX,github.com,🚀 节点选择
+- DOMAIN-SUFFIX,github.io,🚀 节点选择
+- DOMAIN-SUFFIX,githubusercontent.com,🚀 节点选择
+- DOMAIN-SUFFIX,amazon.com,🚀 节点选择
+- DOMAIN-SUFFIX,amazonaws.com,🚀 节点选择
+- DOMAIN-SUFFIX,netflix.com,🚀 节点选择
+- DOMAIN-SUFFIX,nflxvideo.net,🚀 节点选择
+- DOMAIN-SUFFIX,spotify.com,🚀 节点选择
+- DOMAIN-SUFFIX,deezer.com,🚀 节点选择
+- DOMAIN-SUFFIX,baidu.com,🎯 全球直连
+- DOMAIN-SUFFIX,qq.com,🎯 全球直连
+- DOMAIN-SUFFIX,taobao.com,🎯 全球直连
+- DOMAIN-SUFFIX,weibo.com,🎯 全球直连
+- DOMAIN-SUFFIX,zhihu.com,🎯 全球直连
+- DOMAIN-SUFFIX,apple.com,🎯 全球直连
+- DOMAIN-SUFFIX,icloud.com,🎯 全球直连
+- DOMAIN-SUFFIX,me.com,🎯 全球直连
+- DOMAIN-SUFFIX,mzstatic.com,🎯 全球直连
+- DOMAIN-SUFFIX,local,🎯 全球直连
+- IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
+- IP-CIDR,10.0.0.0/8,🎯 全球直连,no-resolve
+- IP-CIDR,172.16.0.0/12,🎯 全球直连,no-resolve
+- IP-CIDR,127.0.0.0/8,🎯 全球直连,no-resolve
+- IP-CIDR,100.64.0.0/10,🎯 全球直连,no-resolve
+- IP-CIDR,224.0.0.0/4,🎯 全球直连,no-resolve
+- IP-CIDR6,fe80::/10,🎯 全球直连,no-resolve
+- IP-CIDR6,fc00::/7,🎯 全球直连,no-resolve
+- IP-CIDR6,::1/128,🎯 全球直连,no-resolve
+- DOMAIN-KEYWORD,admarvel,🛑 全球拦截
+- DOMAIN-KEYWORD,admaster,🛑 全球拦截
+- DOMAIN-SUFFIX,09mk.cn,🛑 全球拦截
+- DOMAIN-SUFFIX,100peng.com,🛑 全球拦截
+- DOMAIN-SUFFIX,local,🎯 全球直连
+- IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
+- MATCH,🐟 漏网之鱼
